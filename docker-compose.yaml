@@ -8,4 +8,10 @@ services:
     volumes:
       - ./api:/app
       - /app/node_modules
+  blog:
+    build: ./blog
+    container_name: blog_container
+    ports:
+      - '3000:3000'
+    stdin_open: true
 
